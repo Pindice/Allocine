@@ -11,7 +11,7 @@ COPY . /app
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Exposer le port sur lequel l'application sera accessible
-EXPOSE 8501
+EXPOSE 80
 
 # Commande pour exécuter l'application
-CMD ["streamlit", "run", "main.py"]
+CMD ["streamlit", "run", "main.py", "--server.port=80"]
